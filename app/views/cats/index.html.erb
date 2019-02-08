@@ -1,5 +1,27 @@
-<h1>Cats#index</h1>
-<p>Find me in app/views/cats/index.html.erb</p>
 
-<button class="btn btn-primary btn-md" >cek</button>
-<a href="#" class="btn btn-danger">Test Aplikasi</a>
+<div class="container">
+	<div class="row">
+		<p></p>
+		<h1>Cat Table</h1>
+		<table class="table table-bordered table-responsive table-striped text-center">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Breed</th>
+					<th>Opsi</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cats.each do |cat| %>
+				<tr>
+					<td><%= cat.id %></td>
+					<td><%= cat.name %></td>
+					<td><%= cat.breed %></td>
+					<td></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<h3>Create a new Cat Data</h3>
+
+<%= form_with model: @cat do |form|  %>
+ <%= form.text_field :name, placeholder: "name" %>
+ <%= form.text_field :breed, placeholder: "breed" %>
+
+<%= form.submit %>
+
+<% end %>
