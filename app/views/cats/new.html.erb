@@ -1,8 +1,10 @@
+<%= render 'navigation' %>
+
 <div class="container">
 <div class="row">
 
 <h3>Add Data</h3>
-<%= form_for @cats do |f|  %>
+<%= form_with model: @cats do |f|  %>
 <div class="form-group">
  <%= f.label :Name %>
  <%= f.text_field :name, class:'form-control', placeholder: "name" %>

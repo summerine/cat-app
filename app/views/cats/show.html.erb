@@ -1,0 +1,25 @@
+<%= render 'navigation' %>
+
+<div class="container">
+	<div class="row">
+		<%= form_for(@cats) do |cat| %>
+
+			<div class="form-group">
+				<%= cat.label :ID %>
+				<%= cat.text_field :id, class:'form-control', type: 'text', disabled: true %>
+			</div>
+
+
+			<div class="form-group">
+				<%= cat.label :Name %>
+				<%= cat.text_field :name, class:'form-control', type: 'text', disabled: true %>
+			</div>
+
+
+			<div class="form-group">
+				<%= cat.label :Age %>
+				<%= cat.text_field :age, class:'form-control', type: 'number', disabled: true %>
+			</div>
+		<% end %>	
+	</div>
+</div>

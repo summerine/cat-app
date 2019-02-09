@@ -1,3 +1,4 @@
+<%= render 'navigation' %>
 
 <div class="container">
 	<div class="row">
@@ -20,7 +21,11 @@
 					<td><%= cat.name %></td>
 					<td><%= cat.breed %></td>
 					<td><%= cat.age %></td>
-					<td></td>
+					<td>
+						<%= link_to 'Detail', cat_path(cat), class:'btn btn-info' %>
+						<%= link_to 'Edit', cat_path(cat), class:'btn btn-primary' %>
+						<%= link_to 'Delete', cat_path(cat), class:'btn btn-danger' %>
+					</td>
 				</tr>
 				<% end %>
 			</tbody>
