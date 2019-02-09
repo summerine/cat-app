@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Acknowledgments
+
+- [Rizki Mufrizal's Belajar Ruby on Rails] (https://rizkimufrizal.github.io/belajar-ruby-on-rails/)
+- [Nancy Do's Ruby on Rails CRUD Tutorial] (https://medium.com/@nancydo7/ruby-on-rails-crud-tutorial-899117710c7a)
