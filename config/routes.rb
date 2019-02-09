@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cats/show'
  # get 'cats/show'
  # get 'cats/new'
  # get 'cats/edit'
