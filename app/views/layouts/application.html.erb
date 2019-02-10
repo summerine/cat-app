@@ -7,9 +7,30 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+    <style type="text/css">
+      .alert-success {
+        color:green;
+      }
+
+      .alert-warning {
+        color:red;
+      }
+    </style>
+  </head>
   <body>
-    <%= yield %>
+    <% if notice %>
+    <div class="container">
+    <p class="alert alert-success"><%= notice %></p>
+    </div>
+    <% end %>
+
+     <%= yield %>
+
+    <% if alert %>
+    <div class="container">
+    <p class="alert alert-warning"><%= alert %></p>
+    </div>
+    <% end %>
   </body>
 </html>
