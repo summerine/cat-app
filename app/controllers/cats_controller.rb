@@ -15,7 +15,8 @@ class CatsController < ApplicationController
   	@cats = Cat.new(cat_params)
 	
 	if @cats.save
-	redirect_to cats_path, notice: "Data is added"
+	
+	redirect_to cats_path
 else 
 	render 'new'
 	end
@@ -25,6 +26,24 @@ end
   	@cats = Cat.find(params[:id])
   end
 
+  def update 
+  	@cats = Cat.find(params[:id])
+  
+  if @cats.update(cat_params)
+
+  	redirect_to cats_path
+ else
+ 	render 'edit' 	
+	end
+end	
+
+ def destroy
+ 	@cats = Cat.find(params[:id])
+ 	@cats.destroy
+
+ 	redirect_to cats_path	
+
+end
 
   private 
   	def cat_params

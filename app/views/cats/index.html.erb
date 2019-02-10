@@ -7,7 +7,6 @@
 		<table class="table table-bordered table-responsive table-striped text-center">
 			<thead>
 				<tr>
-					<th>ID</th>
 					<th>Name</th>
 					<th>Breed</th>
 					<th>Age</th>
@@ -17,14 +16,13 @@
 			<tbody>
 				<% @cats.each do |cat| %>
 				<tr>
-					<td><%= cat.id %></td>
 					<td><%= cat.name %></td>
 					<td><%= cat.breed %></td>
 					<td><%= cat.age %></td>
 					<td>
 						<%= link_to 'Detail', cat_path(cat), class:'btn btn-info' %>
-						<%= link_to 'Edit', cat_path(cat), class:'btn btn-primary' %>
-						<%= link_to 'Delete', cat_path(cat), class:'btn btn-danger' %>
+						<%= link_to 'Edit', edit_cat_path(cat), class:'btn btn-primary' %>
+						<%= link_to 'Delete', cat_path(cat), class:'btn btn-danger', method: :delete, data: {confirm: 'Do you want to delete this data?'} %>
 					</td>
 				</tr>
 				<% end %>
