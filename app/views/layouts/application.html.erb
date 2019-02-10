@@ -19,16 +19,16 @@
     </style>
   </head>
   <body>
-    <% if notice %>
-    <div class="container">
-    <p class="alert alert-success"><%= notice %></p>
+    <% if flash[:notice] %>
+    <div class="container-fluid">
+    <p class="alert alert-success"><%= flash[:notice] %></p>
     </div>
     <% end %>
 
      <%= yield %>
 
     <% if alert %>
-    <div class="container">
+    <div class="container-fluid">
     <p class="alert alert-warning"><%= alert %></p>
     </div>
     <% end %>
