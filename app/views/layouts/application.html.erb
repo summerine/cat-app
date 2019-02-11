@@ -20,20 +20,9 @@
   </head>
   <body>
     <div class="container-fluid">
-    <% if flash[:notice] %>
-        <div class="alert alert-success alert-dismissible fade show">
-         <%= flash[:notice] %>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-    <% end %>
+    <%= flash_messages %>
 
-    <% if alert %>
-        <p class="alert alert-warning"><%= alert %></p>
-    <% end %>
-   <%= yield %>
-
-
+    <%= yield %>
   </div>
   </body>
 </html>

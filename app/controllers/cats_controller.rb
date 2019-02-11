@@ -15,7 +15,7 @@ class CatsController < ApplicationController
   	@cats = Cat.new(cat_params)
 	
 	if @cats.save
-	flash[:notice] = "Data has been added!"	
+	flash[:success] = "Data has been added!"	
 	redirect_to cats_path
 else 
 	render 'new'
@@ -30,7 +30,7 @@ end
   	@cats = Cat.find(params[:id])
   
   if @cats.update(cat_params)
-  	flash[:notice] = "Data has been updated!"
+  	flash[:success] = "Data has been updated!"
   	redirect_to cats_path
  else
  	render 'edit'	
@@ -40,7 +40,7 @@ end
  def destroy
  	@cats = Cat.find(params[:id])
  	@cats.destroy
-
+  flash[:alert] = "Data has been deleted!"
  	redirect_to cats_path	
 
 end
